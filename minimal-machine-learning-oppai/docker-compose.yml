@@ -4,3 +4,5 @@ services:
     build: .
     ports:
      - "4567:4567"
+     - "1022:22"
+     
