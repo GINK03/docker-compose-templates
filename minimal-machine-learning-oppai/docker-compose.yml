@@ -5,4 +5,5 @@ services:
     ports:
      - "4567:4567"
      - "1022:22"
-     
+    volumes:
+      - ~/data:/data
