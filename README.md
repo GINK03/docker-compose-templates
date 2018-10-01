@@ -14,5 +14,5 @@ docker run -it nardtree/oppai server.py
 ```
 
 
-##　注：Ubuntu 18.04とDockerではloginできない問題がある
+## 　注：Ubuntu 18.04とDockerではloginできない問題がある
  - [ここ](https://github.com/docker/cli/issues/1136#issuecomment-399537945)のバイナリを潰すと動く
