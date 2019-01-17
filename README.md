@@ -37,5 +37,14 @@ init.rcに作成したdocker-compose.ymlをしていしてupするスクリプ�
 ```
 docker-compose -f /home/anasys/opf-ai-ymbg-secession-prediction/system/docker-compose.yml up
 ```
+
+なお、docker-compose.ymlの内容は
+```
+version: '3'
+services:
+  secession-prediction:
+    build: .
+# 必要に応じて  restart: alwaysをつける
+```
 これでちゃんと動く（すごーい）
 
