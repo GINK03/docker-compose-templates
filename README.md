@@ -21,3 +21,20 @@ docker push nardtree/oppai:latest
 
 ## 　注：Ubuntu 18.04とDockerではloginできない問題がある
  - [ここ](https://github.com/docker/cli/issues/1136#issuecomment-399537945)のバイナリを潰すと動く
+ 
+## デーモン化
+dockerが仮に自動起動するデーモンだととってもメリットがあるが、Ubuntu 18.04でこのような方法で動かすことができた。
+
+まず、init.rcを作成して実行権限とシーバンを与える。  
+
+```console
+$ printf '%s\n' '#!/bin/bash' 'exit 0' | sudo tee -a /etc/rc.local
+$ sudo chmod +x /etc/rc.local
+$ sudo reboot
+```
+
+init.rcに作成したdocker-compose.ymlをしていしてupするスクリプトを書く  
+```
+docker-compose -f /home/anasys/opf-ai-ymbg-secession-prediction/system/docker-compose.yml up
+```
+
